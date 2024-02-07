@@ -6,6 +6,9 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 400;
 }
+body, html{
+    width: 100%;
+}
 .contPrinc{
     display: flex;
     align-items: stretch;
@@ -119,6 +122,11 @@ aside{
     width: 85%;
 }
 
+header{
+    width: 100%;
+    display: none;
+}
+
 #AboutMe{
     display: flex;
     flex-direction: column;
@@ -175,14 +183,13 @@ aside{
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-    width: 90%;
 }
     .container{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        width: 100%;
+        width: 90%;
         position: relative;
     }
         div.contProj{
@@ -281,10 +288,12 @@ aside{
 }
     .techCont{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
+        flex-wrap: wrap;
         gap: 230px;
-
+        padding-left: 40px;
+        padding-right: 40px;
     }
         .techs{
             display: flex;
@@ -323,6 +332,15 @@ aside{
                 #vercel img{
                     border-radius: 50%;
                 }
+
+#Contact{
+    min-height: 100vh;
+    padding-top: 80px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width: 1510px){
     .links{
@@ -378,4 +396,81 @@ aside{
     .fotoTexto{
         width: 95%;
     }
+}
+@media screen and (max-width: 1080px){
+    aside, .separador{
+        display: none;
+    }
+    header{
+        display: flex;
+    }
+    .contenido{
+        width: 100%;
+    }
+    #AboutMe{
+        padding-top: 80px;
+    }
+    #Projects{
+        padding-top: 80px;
+    }
+    #Technologies{
+        padding-top: 80px;
+    }
+    #Contact{
+        display: flex;
+    }
+    .fotoTexto{
+        width: 80%;
+        gap: 25px;
+    }
+    .links{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 0;
+        height: 80px;
+        width: 100%;
+        gap: 100px;
+        background-color: black;
+        position: fixed;
+        top: 0;
+        z-index: 99999999;
+    }
+    .techs h1{
+        color: #ffffff;
+    }
+    .contacto{
+        flex-direction: row;
+        gap: 50px;
+    }
+    .medio{
+        width: auto;
+    }
+    .medioIcon{
+        height: 40px;
+    }
+    .medio h4{
+        font-size: 1.25rem;
+    }
+}
+@media screen and (max-width: 1080px){
+    .fotoTexto{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 818px){
+    .foto{
+        height: 400px;
+    }
+    .links{
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 818px){
+    .foto{
+        display: none;    
+    }
+    .texto{
+        width: 100%;
+    }
+    
 }
