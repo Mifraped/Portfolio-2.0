@@ -418,6 +418,15 @@ header{
     }
     #Contact{
         display: flex;
+        justify-content: flex-start;
+        padding-top: 200px;
+        padding-left: 25px;
+        padding-right: 25px;
+        gap: 50px;
+    }
+    #Contact h2{
+        font-size: 2rem;
+        text-align: center;
     }
     .fotoTexto{
         width: 80%;
@@ -431,6 +440,8 @@ header{
         width: 100%;
         gap: 100px;
         background-color: black;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
         position: fixed;
         top: 0;
         z-index: 99999999;
@@ -439,6 +450,7 @@ header{
         color: #ffffff;
     }
     .contacto{
+        height: auto;
         flex-direction: row;
         gap: 50px;
     }
@@ -473,4 +485,39 @@ header{
         width: 100%;
     }
     
+}
+@media screen and (max-width: 818px){
+    #Contact{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .contacto{
+        gap: 17px;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    #Contact h2{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .medio{
+    gap: 5px;
+    }
+    .medioIcon{
+        height: 30px;
+    }
+    .medio h4{
+        font-size: 1.15rem;
+    }
+}
+@media screen and (max-width: 585px){
+    .links{
+        gap: 20px;
+    }
+    .links a{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 431px){
+
 }
