@@ -529,6 +529,11 @@ header{
         font-size: 0.9rem;
     }
 }
+@media screen and (max-width: 415px){
+    #AboutMe{
+        padding-top: 120px;
+    }
+}
 @media screen and (max-width: 375px){
     div.proj{
         width: 300px;
@@ -547,5 +552,7 @@ header{
     }
 }
 @media screen and (max-width: 312px){
-    
+    .links a:hover, .active-link {
+        transform: scale(1.1);
+    }
 }
