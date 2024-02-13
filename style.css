@@ -2,18 +2,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color:#ffffff;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 400;
 }
 body, html{
     width: 100%;
 }
-.contPrinc{
+
+.titles-dark-color{
+    color: #64ff7f;
+}
+
+.text-dark-color{
+    color: #ffffff;
+}
+
+.titles-light-color{
+    color: #4b0082;
+}
+
+.text-light-color{
+    color: black;
+}
+.contPrinc-dark{
     display: flex;
     align-items: stretch;
     justify-content: flex-end;
     background-color: #212121;
+}
+
+.contPrinc-light{
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    background-color: #F1F3F7;
 }
 
 aside{
@@ -27,8 +49,58 @@ aside{
 .asideCont{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
+}
+
+.modes{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    height: 20%;
+    width: 40%;
+}
+
+.dark, .light{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+
+.darkIcon, .lightIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    cursor: pointer;
+}
+
+svg{
+    height: 70%;
+}
+
+.darkIcon{
+    height: 75%;
+}
+.lightIcon{
+    height: 100%;
+}
+.lightIcon-dark path{
+    fill: #ffffff;
+}
+.darkIcon-dark path{
+    fill: #64ff7f;
+}
+.lightIcon-light path{
+    fill: orange;
+}
+.darkIcon-light path{
+    fill: black;
 }
 
 .links{
@@ -37,8 +109,7 @@ aside{
     align-items: center;
     gap: 30px;
     width: 100%;
-    height: 50%;
-    padding-top: 80%;
+    height: 30%;
 }
 
 .links a{
@@ -48,12 +119,16 @@ aside{
     transition: transform 0.3s ease;
 }
 
-.links a:hover{
+.links a.text-dark-color:hover{
     color: #64ff7f;
     transform: scale(1.5);
 }
+.links a.text-light-color:hover{
+    color: #4b0082;
+    transform: scale(1.5);
+}
 
-.links a::after {
+.links a.after-dark::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -66,13 +141,31 @@ aside{
     transition: transform 0.25s ease-out;
 }
 
-.links a:hover::after, .links a.active-link::after {
+.links a.after-light::after {
+    background-color: black;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.links a:hover::after, .links a.active-link-dark::after, .links a.active-link-light::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-.active-link {
+.active-link-dark{
     color: #64ff7f;
+    transform: scale(1.5);
+}
+
+.active-link-light{
+    color: #4b0082;
     transform: scale(1.5);
 }
 
@@ -83,7 +176,6 @@ aside{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    color: #64ff7f;
 }
 
 .medio{
@@ -97,7 +189,7 @@ aside{
 
 .medioIcon{
     height: 25px;
-    background-color: #ffffff;
+    background-color: #F1F3F7;
     border-radius: 50%;
 }
 
@@ -110,9 +202,15 @@ aside{
     width: 50%;
 }
 
-.separador{
+.separador-dark{
     height: 80vh;
     border: solid 1px #ffffff;
+    align-self: center;
+}
+
+.separador-light {
+    height: 80vh;
+    border: solid 1px black;
     align-self: center;
 }
 
@@ -154,13 +252,11 @@ header{
 .texto h1{
     font-size: 3rem;
     font-weight: 400;
-    color: #64ff7f;
 }
 
 .texto h3{
     font-size: 1.5rem;
     font-weight: 400;
-    color: #64ff7f;
 }
 
 .texto p{
@@ -234,16 +330,19 @@ header{
                 height: 50%;
                 width: 100%;
                 padding: 15px;
-                background-color: #323030;
                 border-bottom-right-radius: 10px;
                 border-bottom-left-radius: 10px;
+            }
+            .textProj-dark{
+                background-color: #323030;
+            }
+            .textProj-light{
+                background-color: #d6d6d6;
             }
             .textProj h2{
                 font-size: 1.5rem;
                 font-weight: 400;
-                color: #64ff7f;
             }
-
             .textProj h3{
                 font-size: 1rem;
                 font-weight: 400;
@@ -305,8 +404,13 @@ header{
         .techs h1{
             font-size: 3rem;
             font-weight: 400;
-            color: #ffffff;
             margin-bottom: 30px;
+        }
+        .techs-dark{
+            color:#ffffff
+        }
+        .techs-light{
+            color:#4b0082
         }
             .techIcoName{
                 display: flex;
@@ -345,7 +449,7 @@ header{
 
 @media screen and (max-width: 1510px){
     .links{
-        padding-top: 60%;
+        /* padding-top: 60%; */
     }
     .links a{
         font-size: 1.25rem;
