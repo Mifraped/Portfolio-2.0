@@ -83,6 +83,9 @@ aside{
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.contacto h2{
     color: #64ff7f;
 }
 
