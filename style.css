@@ -537,6 +537,9 @@ header{
     #AboutMe{
         padding-top: 120px;
     }
+    .links a:hover, .active-link {
+        transform: scale(1);
+    }
 }
 @media screen and (max-width: 375px){
     div.proj{
