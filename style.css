@@ -552,11 +552,11 @@ header{
 }
 @media screen and (max-width: 350px){
     .links a:hover, .active-link {
-        transform: scale(1.3);
+        transform: scale(1);
     }
 }
 @media screen and (max-width: 312px){
     .links a:hover, .active-link {
-        transform: scale(1.1);
+        transform: scale(1);
     }
 }
